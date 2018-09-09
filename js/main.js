@@ -108,4 +108,9 @@ $(document).ready(function(){
       }
     },
   });
+
+
+  $('.verticalLearnMore').click(function(){
+    $.scrollify.move("#02");
+  });
 });
