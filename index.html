@@ -11,19 +11,18 @@
 </head>
 <body>
   <main>
-    <header class="mainPage">
+    <section class="mainPage" data-section-name="01">
       <div class="swiper-container mainPage-swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide"><img src="img/bg1.jpg" alt=""></div>
           <div class="swiper-slide"><img src="img/bg2.jpg" alt=""></div>
           <div class="swiper-slide"><img src="img/bg3.jpg" alt=""></div>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-xl-4 offset-xl-2 mainLeftColumn">
+            <div class="swiper-pagination mainPage-swiper-pagination"></div>
             <div class="swrvskyLogo">
               <img src="img/swr.png" alt="">
               <p>Quest</p>
@@ -116,12 +115,13 @@
           </div>
         </div>
       </div>
-    </header>
-    <section class="mainSection">
+    </section>
+    <section class="mainSection" data-section-name="02">
       <div class="container">
         <div class="row detailsSection">
           <div class="col-xl-4 offset-xl-1 detailsColumn">
             <div class="detailsItem">
+              <div class="line1"></div>
               <div class="detailsItem__img">
                 <img src="img/01.jpg" alt="">
                 <div class="detailsItem__Number">
@@ -137,6 +137,8 @@
           </div>
           <div class="col-xl-4 offset-xl-1 detailsColumn">
             <div class="detailsItem">
+              <div class="line2"></div>
+              <div class="line3"></div>
               <div class="detailsItem__img">
                 <img src="img/02.jpg" alt="">
                 <div class="detailsItem__Number">
@@ -152,6 +154,7 @@
           </div>
           <div class="col-xl-4 offset-xl-1 detailsColumn">
             <div class="detailsItem">
+              <div class="line4"></div>
               <div class="detailsItem__img">
                 <img src="img/03.jpg" alt="">
                 <div class="detailsItem__Number">
@@ -167,6 +170,7 @@
           </div>
           <div class="col-xl-4 offset-xl-1 detailsColumn">
             <div class="detailsItem">
+              <div class="line5"></div>
               <div class="detailsItem__img">
                 <img src="img/04.jpg" alt="">
                 <div class="detailsItem__Number">
@@ -237,7 +241,7 @@
         </div>
       </div>
     </section>
-    <section class="instaSection">
+    <section class="instaSection" data-section-name="03">
       <div class="container">
         <div class="row">
           <div class="col-xl-4 instaBlock"><img src="img/sample.jpg" alt=""></div>
@@ -309,6 +313,7 @@
   <script src="js/jquery-3.3.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/jquery.scrollify.js"></script>
   <script src="js/jquery.downCount.js"></script>
   <script src="js/main.js"></script>
 </body>
