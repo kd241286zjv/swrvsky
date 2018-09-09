@@ -36,6 +36,11 @@ $(document).ready(function(){
       el: '.mainPage-swiper-pagination',
       clickable: true,
     },
+    effect: 'fade',
+    fadeEffect: {
+      crossfade: true,
+    },
+    autoplay: true,
   });
 
   var gooseSwiper = new Swiper('.goose-swiper-container', {
