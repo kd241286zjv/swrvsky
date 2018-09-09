@@ -967,3 +967,28 @@ header.mainPage{
 header.mainPage .logoSquare{
   height: 450px;
 }
+@media(min-width: 1620px) and (max-width: 1700px){
+  .mainPage-swiper-container{
+    width: 74.9%;
+  }
+}
+@media(min-width: 1550px) and (max-width: 1610px){
+  .mainPage-swiper-container{
+    width: 76.1%;
+  }
+}
+@media(min-width: 1380px) and (max-width: 1500px){
+  .mainPage-swiper-container{
+    width: 79%;
+  }
+}
+@media(min-width: 1300px) and (max-width: 1400px){
+  .mainPage-swiper-container{
+    width: 80.6%;
+  }
+}
+@media(min-width: 1200px) and (max-width: 1300px){
+  .mainPage-swiper-container{
+    width: 82.6%;
+  }
+}
