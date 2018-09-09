@@ -1,0 +1,965 @@
+@font-face {
+    font-family: 'museo_bold';
+    src: url('museosansbold-webfont.eot');
+    src: url('museosansbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('museosansbold-webfont.woff2') format('woff2'),
+         url('museosansbold-webfont.woff') format('woff'),
+         url('museosansbold-webfont.svg#museo_sans_cyrl700') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'museo_black';
+    src: url('fonts/museosansblack-webfont.eot');
+    src: url('fonts/museosansblack-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansblack-webfont.woff2') format('woff2'),
+         url('fonts/museosansblack-webfont.woff') format('woff'),
+         url('fonts/museosansblack-webfont.svg#museo_sans_cyrl900') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'museo_medium';
+    src: url('fonts/museosansmedium-webfont.eot');
+    src: url('fonts/museosansmedium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansmedium-webfont.woff2') format('woff2'),
+         url('fonts/museosansmedium-webfont.woff') format('woff'),
+         url('fonts/museosansmedium-webfont.svg#museo_sans_cyrl500') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'museo_regular';
+    src: url('fonts/museosansregular-webfont.eot');
+    src: url('fonts/museosansregular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/museosansregular-webfont.woff2') format('woff2'),
+         url('fonts/museosansregular-webfont.woff') format('woff'),
+         url('fonts/museosansregular-webfont.svg#museo_sans_cyrl300') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/********GENERAL********/
+body{
+  font-size: 16px;
+  font-family: 'museo_medium';
+  color: #fff;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:focus, input:focus, button:focus{
+  outline:none;
+}
+a:hover{
+  text-decoration: none;
+  color: inherit;
+}
+p{
+  margin: 0;
+}
+
+/********HEADER********/
+header{
+  background-image: url(../img/mainBg.jpg);
+  background-size:cover;
+  background-position: center center;
+  padding: 50px 0;
+  color: #f5f5f5;
+  overflow: hidden;
+}
+.logo{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.logo>*{
+  width: 50%;
+  height: 80px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo>* img{
+  max-width: 100%;
+}
+.logoLeft{
+  background-color: #000;
+}
+.logoRight{
+  background-color: #f5f5f5;
+}
+.logoColumn{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.timer{
+  color: #f5f5f5;
+}
+.timerAnnounce{
+  font-size: 12px;
+}
+.timerText{
+  font-size: 25px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.timerText li{
+  margin-right: 5px;
+}
+.logo{
+  margin-bottom: 50px;
+}
+.accountColumnWrap{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+}
+.loggedUser{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 15px;
+  position: relative;
+}
+.loggedUser svg{
+  fill:#f5f5f5;
+  width: 8px;
+  height: auto;
+  margin-left: 10px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+  font-size: 15px;
+}
+.loggedUser:hover svg{
+  fill:#991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.logout svg{
+  fill:#f5f5f5;
+  width: 12px;
+  margin-right: 8px;
+  transform:scale(-1, 1);
+}
+.logout{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  border: 1px solid #f5f5f5;
+  width: 100px;
+  height: 40px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.logout:hover{
+  border-color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.accountColumn{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.loggedUserMenu{
+  position: absolute;
+  display: none;
+  right: 0;
+  width: 90%;
+  background-color: #fff;
+  top: 25px;
+  z-index: 2;
+}
+.loggedUserMenu ul{
+  padding: 20px;
+}
+.loggedUserMenu ul li{
+  color: #000;
+  font-family: 'museo_medium';
+  font-size: 13px;
+  cursor: pointer;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.loggedUserMenu ul li:hover{
+  color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.loggedUser-clicked svg{
+  transform:scale(1,-1);
+  fill:#991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.swrvskyLogo{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-end;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  position: relative;
+}
+.swrvskyLogo p{
+  font-family: 'museo_black';
+  font-size: 80px;
+  text-transform: uppercase;
+  line-height: 1;
+  z-index: 1;
+}
+.swrvskyLogo img{
+  margin-bottom: 10px;
+  z-index: 1;
+}
+.logoSquare{
+  position: absolute;
+  left: calc(50% - 162px);
+  height: 400px;
+  width: 120%;
+  bottom: 40px;
+  background-color: #991010;
+  opacity: .5;
+  z-index: 0;
+  filter:brightness(50%);
+}
+
+/********BODY********/
+.taskSection{
+  background-color: #fff;
+  color: #000;
+}
+.taskBlock{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  display: none;
+}
+.taskHeader{
+  font-size: 40px;
+  font-family: 'museo_regular';
+  position: relative;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+.taskHeader:after{
+  font-size: 12px;
+  content:'Не выполнено';
+  position: relative;
+  opacity: .25;
+  position: absolute;
+  bottom: 5px;
+  right: -125px;
+}
+.taskBody p{
+  padding-left: 10%;
+  font-family: 'museo_regular';
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+.taskBody a{
+  width: 200px;
+  height: 46px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  text-transform: uppercase;
+  border: 3px solid #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskBody a:hover{
+  background-color: #991010;
+  color: #f5f5f5;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.taskMenu ul{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-grow:1;
+}
+.taskMenu ul li{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  height: 90px;
+  width: calc(100% / 9);
+  background-color: #f5f5f5;
+  cursor:pointer;
+  font-size: 25px;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu ul li:hover{
+  color: #901010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu ul li.succeedTask{
+  color: #f5f5f5;
+  background-color: #000;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskMenu ul li.activeTask{
+  color: #f5f5f5;
+  background-color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.taskImg{
+  width: 30%;
+  position: relative;
+}
+.taskImg img{
+  max-width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.taskBlock-active{
+  display: block;
+}
+
+/********FOOTER********/
+footer{
+  background-color: #000;
+  padding: 100px 0;
+  font-family: 'museo_regular';
+  font-size: 12px;
+  color: #f5f5f5;
+}
+.faq li{
+  margin-bottom: 10px;
+}
+.faq a{
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.faq a:hover{
+  color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.footerSocials{
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-around;
+}
+.footerSocials a{
+  display: block;
+  width: 35px;
+  height: 35px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #f5f5f5;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.footerSocials a:hover{
+  background-color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+
+
+/********MEDIA********/
+@media(max-width: 1199px){
+  .logoSquare{
+    left: calc(50% - 170px);
+    width: 100%;
+  }
+}
+@media(max-width: 991px){
+  .swrvskyLogo p{
+    font-size: 60px;
+  }
+  .swrvskyLogo img{
+    max-width: 140px;
+  }
+  .logoSquare{
+    left: 0;
+    bottom: 30px;
+  }
+  .loggedUser{
+    font-size: 10px;
+  }
+  .logout{
+    width: 80px;
+  }
+  .taskBlock, footer{
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  .loggedUserMenu{
+    width: 150px;
+  }
+  .loggedUserMenu ul{
+    padding: 10px;
+  }
+}
+@media(max-width: 767px){
+  .taskImg{
+    display: none;
+  }
+  .logo{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .logo>*{
+    width: 100%;
+    height: 60px;
+  }
+  .accountColumn{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .loggedUser{
+    order:2;
+  }
+  header{
+    padding: 25px 0;
+  }
+  .timerText{
+    font-size: 20px;
+  }
+  .logout{
+    width: 100%;
+  }
+  .loggedUser{
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .swrvskyLogo img{
+    max-width: 100px;
+  }
+  .swrvskyLogo p{
+    font-size: 45px;
+  }
+  .logo{
+    margin-bottom: 25px;
+  }
+  .taskMenu ul li{
+    height: 60px;
+  }
+  .taskBlock, footer{
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  .taskHeader{
+    font-size: 30px;
+  }
+  .taskBody p{
+    font-size: 13px;
+  }
+}
+@media(max-width: 575px){
+  .logoSquare{
+    display: none;
+  }
+  .logo{
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .logo>*{
+    width: 50%;
+    padding: 20px;
+  }
+  .timer{
+    text-align: center;
+  }
+  .timerText{
+    justify-content: center;
+  }
+  .swrvskyLogo{
+    order:1;
+  }
+  .accountColumnWrap{
+    order:2;
+  }
+  .logoColumn{
+    order:3;
+    margin-top: 15px;
+  }
+  .loggedUser{
+    margin-top: 15px;
+  }
+  .taskMenu ul li{
+    height: 50px;
+    font-size: 18px;
+  }
+}
+
+/********INSTA********/
+.instaSection{
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+.instaSection .container:first-child{
+  flex-grow:1;
+}
+.instaSection .container:first-child .row{
+  height: 100%;
+}
+.instaBlock{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.instaBlock img{
+  max-width: 90%;
+  max-height: 90%;
+}
+
+/********DETAILS********/
+.detailsSection{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.detailsItem{
+  width: 75%;
+}
+.detailsItem__img{
+  position: relative;
+  overflow:hidden;
+}
+.detailsItem__img img{
+  width: 100%;
+  height: 270px;
+  object-fit:cover;
+}
+.detailsItem__Number{
+  position: absolute;
+  top: 0;
+  left: 30px;
+  z-index: 2;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.detailsItem__Number p{
+  font-family: 'museo_regular';
+  color: #f5f5f5;
+  position: absolute;
+  font-size: 30px;
+  top: calc(50% - 22px);
+  cursor: default;
+}
+.detailsItem__Number div{
+  width: 70px;
+  height: 110px;
+  filter:brightness(75%);
+  opacity: .75;
+  background-color: #991010;
+  left: 0;
+  top: 0;
+}
+.detailsItem__text{
+  font-family: 'museo_regular';
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: flex-start;
+  align-items: flex-start;
+  background-color: #f5f5f5;
+  padding: 25px;
+  opacity: 0;
+  color: #000;
+  z-index: 1;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.detailsItem:hover .detailsItem__text{
+  opacity: 1;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.detailsItem:hover .detailsItem__Number{
+  transform:translateY(190%);
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.detailsSection .detailsColumn:nth-child(even) .detailsItem{
+  padding-top:25%;
+}
+.detailsItem__caption{
+  color: #000;
+  font-size: 15px;
+  line-height: 1.2;
+  margin: 15px 25px;
+}
+.youtubeButton{
+  width: 50px;
+  height: 50px;
+  background-color: #991010;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.youtubeButton:hover{
+  background-color: #000;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.youtubeButton svg{
+  width: 20px;
+  height: 20px;
+}
+.detailsButtons{
+  width: 100%;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+  justify-content: space-between;
+}
+.takePart{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+.takePart a{
+  width: 220px;
+  height: 50px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #991010;
+  color: #f5f5f5;
+  font-size: 15px;
+  text-transform: uppercase;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.takePart a:hover{
+  background-color: #f5f5f5;
+  color: #000;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.takePart p{
+  font-family: 'museo_regular';
+  font-size: 15px;
+  color: #000;
+  margin-left: 20px;
+}
+.mainPrize-swiper-container .swiper-slide{
+  height: 310px;
+}
+.mainPrize-swiper-container .swiper-slide img{
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+}
+.mainPrize-swiper-container{
+  width: 90%;
+  margin-right: 0;
+  position: relative;
+}
+.mainPrize-swiper-container__before{
+  font-family: 'museo_regular';
+  position: absolute;
+  width: 160px;
+  height: 55px;
+  display: block;
+  background-color: #991010;
+  top: 52px;
+  left: -55px;
+  color: #f5f5f5;
+  font-size: 20px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  transform:rotateZ(-90deg);
+  cursor: default;
+}
+.swiper-button-next{
+  left: auto;
+  right: 0;
+}
+.swiper-button-prev{
+  left: auto;
+  right: 100px;
+}
+.swiper-button-next, .swiper-button-prev{
+  width: 100px;
+  height: 70px;
+  background: none;
+  background-color: #000;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+  bottom: 0;
+  top: auto;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  background-color: #991010;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.swiper-button-next svg{
+  transform:scale(-1,1);
+}
+.swiper-button-next svg, .swiper-button-prev svg{
+  fill:#f5f5f5;
+  width: 34px;
+  height: 22px;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled{
+  background-color: #f5f5f5;
+  opacity: 1;
+}
+.swiper-button-next.swiper-button-disabled svg, .swiper-button-prev.swiper-button-disabled svg{
+  fill:#000;
+}
+.mainPrize__desc{
+  color: #000;
+  font-size: 15px;
+  margin: 15px 25px;
+  margin-left: 60px;
+  line-height: 1.2;
+}
+.prizeSection{
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.prizeSection h2{
+  font-family: 'museo_regular';
+  font-size: 40px;
+  color: #000;
+  margin: 0;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+.prizeSection__description{
+  font-family: 'museo_regular';
+  color: #000;
+  font-size: 15px;
+  margin-bottom: 20px;
+  padding-left: 80px;
+}
+.prizeSection__hashtag{
+  color: #991010;
+  font-size: 15px;
+  font-family: 'museo_bold';
+  padding-left: 80px;
+  font-weight: 700;
+}
+
+/********HEADER__MAIN********/
+header.mainPage{
+  height: 100vh;
+  position: relative;
+  background: none;
+  background-color: #991010;
+}
+.mainPage-swiper-container{
+  position: absolute;
+  margin-left: 0;
+  width: 72%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+.mainPage-swiper-container .swiper-slide img{
+  height: 100%;
+  width: 100%;
+  object-fit:cover;
+  filter:brightness(50%);
+}
+.language{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.language svg{
+  fill:#f5f5f5;
+  width: 8px;
+  height: auto;
+  margin-left: 5px;
+}
+header.mainPage .accountColumn{
+  justify-content: space-between;
+  width: 75%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.logoWrapper{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: flex-end;
+  align-items: flex-end;
+}
+.goose-swiper-container{
+  width: 100%;
+}
+.goose-swiper-container img{
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+}
+.logoWrapper .logo{
+  margin: 0;
+  width: 75%;
+}
+header.mainPage .swrvskyLogo{
+  margin-top: 175px;
+}
+header.mainPage .logoSquare{
+  width: 100%;
+  left: calc(50% - 220px);
+}
+.slogan{
+  font-family: 'museo_regular';
+  padding-left: 15%;
+  color: #f5f5f5;
+  font-size: 18px;
+  margin: 20px 0;
+}
+header.mainPage .container{
+  height: 100%;
+}
+header.mainPage .container .row{
+  height: 100%;
+}
+.mainLeftColumn, .mainRightColumn{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+}
+header.mainPage{
+  padding: 100px 0;
+}
