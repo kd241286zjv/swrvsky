@@ -1247,3 +1247,359 @@ footer{
   -o-transition: .3s all ease;
   transition: .3s all ease;
 }
+
+/********MODALS********/
+.modal-content{
+  color: #000;
+  border-radius: 0;
+  background-color: #f5f5f5;
+  padding: 60px;
+}
+.close{
+  opacity: 1;
+}
+.close:hover svg{
+  fill:#991010;
+}
+.close svg{
+  width: 22px;
+  height: 22px;
+}
+.modal-header{
+  border: none;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  -ms-align-items: center;
+  align-items: center;
+}
+.modal-dialog{
+  max-width: 490px;
+}
+.modal-title{
+  font-size: 30px;
+  font-family: 'museo_black';
+}
+.modalForm{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100%;
+}
+.modalForm > *{
+  width: 100%;
+  height: 80px;
+}
+.modalForm input[type="text"]{
+  margin-bottom: 20px;
+  border: 2px solid #000;
+  padding: 30px;
+}
+.modalForm input[type="submit"]{
+  margin-bottom: 50px;
+  border: 2px solid #991010;
+  font-size: 15px;
+  color: #f5f5f5;
+  background-color: #991010;
+  cursor: pointer;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.modalForm input[type="submit"]:hover{
+  margin-bottom: 50px;
+  border: 2px solid #991010;
+  font-size: 15px;
+  color: #000;
+  background-color: #f5f5f5;
+  -webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;
+}
+.modal-body{
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -ms-align-items: center;
+  align-items: center;
+}
+.modal-body a{
+  font-size: 15px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  font-family: 'museo_regular';
+}
+
+/********ADAPTIVE********/
+@media(max-width: 1199px){
+  .mainPage-swiper-container{
+    width: 100%;
+  }
+  .mainPage .logoSquare{
+    width: 75%;
+    left: calc(50% - 250px);
+  }
+  .scroll-pagination{
+    left: 5%;
+  }
+  .verticalLearnMore{
+    left: -10px;
+  }
+  .line2{
+    right: 60px;
+  }
+  .line1{
+    top: 35px;
+  }
+  .line4{
+    right: 48px;
+  }
+  .line5{
+    width: 252px;
+    bottom: 74px;
+  }
+  .mainPage-swiper-pagination{
+    bottom: -50px;
+    right: 0;
+  }
+  .swiper-pagination-bullet{
+    width: 27px;
+    height: 12px;
+  }
+}
+@media(max-width: 991px){
+  .logoWrapper .logo{
+    width: 100%;
+  }
+  .slogan{
+    padding: 0;
+  }
+  .mainPage .logoSquare{
+    width: 100%;
+    left: calc(50% - 175px);
+  }
+  .line1{
+    width: 300px;
+  }
+  .line2{
+    height: 34px;
+  }
+  .line3{
+    width: 140px;
+  }
+  .line4{
+    height: 398px;
+  }
+  .line5{
+    width: 207px;
+  }
+  .prizeSection__description{
+    padding: 0;
+  }
+  .prizeSection h2{
+    font-size: 30px;
+  }
+}
+@media(max-width: 767px){
+  .mainPage .swrvskyLogo{
+    margin: 0;
+  }
+  .mainPage{
+    padding: 40px 0;
+  }
+  .sideButtons{
+    display: none;
+  }
+  .slogan{
+    margin: 10px 0;
+    font-size: 14px;
+  }
+  .logoWrapper .logo{
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .mainPage-swiper-pagination{
+    bottom: -30px;
+  }
+  .swiper-button-next, .swiper-button-prev{
+    width: 75px;
+    height: 40px;
+  }
+  .swiper-button-prev{
+    right: 75px;
+  }
+  .mainPage .accountColumn{
+    width: 100%;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  .mainPage .logout{
+    width: 50%;
+  }
+  .detailsItem{
+    width: 100%;
+  }
+  .detailsItem__img img{
+    height: 200px;
+  }
+  .line1{
+    width: 210px;
+  }
+  .line2{
+    height: 25px;
+    bottom: 250px;
+  }
+  .line3{
+    width: 80px;
+  }
+  .line4{
+    height: 322px;
+  }
+  .detailsSection .detailsColumn:nth-child(3) .detailsItem, .detailsSection .detailsColumn:nth-child(4) .detailsItem{
+    padding-left: 0;
+  }
+  .line5{
+    width: 140px;
+  }
+  .prizeSection{
+    padding-top: 0;
+    padding-bottom: 60px;
+  }
+  .mainPrize-swiper-container__before{
+    left: -40px;
+  }
+  .mainPage .logoSquare{
+    bottom: 20px;
+  }
+  .modal-content{
+    padding: 20px;
+  }
+  .modalForm input[type="text"]{
+    padding: 10px;
+  }
+  .modalForm > *{
+    height: 50px;
+  }
+  .modal-header, .modal-body{
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .modalForm input[type="submit"]{
+    margin-bottom: 10px;
+  }
+  .modalForm input[type="text"]{
+    margin-bottom: 5px;
+  }
+  .modal-body a{
+    margin-bottom: 0px;
+  }
+  .modal-dialog{
+    margin-top: 10px;
+  }
+}
+@media(max-width: 575px){
+  .scroll-pagination{
+    left: 0;
+  }
+  .mainPage-swiper-pagination{
+    display: none;
+  }
+  .mainPage .accountColumn{
+    order:1;
+  }
+  .mainRightColumn{
+    order:1;
+  }
+  .mainLeftColumn{
+    order:2;
+  }
+  .logoWrapper{
+    order:2;
+  }
+  .goose-swiper-container img{
+    height: 160px;
+  }
+  .mainPage{
+    padding: 20px 0;
+  }
+  .swrvskyLogo{
+    order:1;
+  }
+  .slogan{
+    order:2;
+    text-align: center;
+  }
+  .takePart{
+    order:3;
+    justify-content: center;
+  }
+  .timer{
+    order:4;
+  }
+  .mainRightColumn{
+    max-height: 275px;
+  }
+  .mainPage .swrvskyLogo{
+    -ms-align-items: center;
+    align-items: center;
+  }
+  .line1, .line2, .line4{
+    height: 152px;
+    bottom: -100px;
+    top: auto;
+    left: 50%;
+    width: 2px;
+  }
+  .animatedSection .line3, .animatedSection .line5{
+    display: none;
+  }
+  .animatedSection .line1:after, .animatedSection .line2:after, .animatedSection .line4:after{
+    content:'';
+    height:0;
+    width: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    background-color: #991010;
+    animation:vertical linear 1s;
+    animation-fill-mode: forwards;
+  }
+  .animatedSection .line4:after{
+    animation-delay: 2s;
+  }
+  .animatedSection .line2:after{
+    animation-delay: 1s;
+  }
+  .detailsItem{
+    padding-top: 25%;
+  }
+  .detailsColumn:first-child .detailsItem{
+    padding-top: 0;
+  }
+  .detailsButtons{
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .takePart{
+    margin-top: 20px;
+  }
+  .mainPrize-swiper-container__before{
+    left: -50px;
+    height: 40px;
+    top: 60px;
+  }
+}
