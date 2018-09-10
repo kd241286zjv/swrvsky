@@ -87,19 +87,8 @@ $(document).ready(function(){
         }
         pagination += "<li><a class=\"" + activeClass + "\" href=\"#" + $(this).attr("data-section-name") + "\"><span class=\"hover-text\">" + $(this).attr("data-section-name").charAt(0).toUpperCase() + $(this).attr("data-section-name").slice(1) + "</span></a></li>";
       });
-
       pagination += "</ul>";
-
       $(".mainPage").append(pagination);
-      /*
-
-      Tip: The two click events below are the same:
-
-      $(".pagination a").on("click",function() {
-        $.scrollify.move($(this).attr("href"));
-      });
-
-      */
       $(".scroll-pagination a").on("click",$.scrollify.move);
     },
     after: function(){
@@ -112,5 +101,13 @@ $(document).ready(function(){
 
   $('.verticalLearnMore').click(function(){
     $.scrollify.move("#02");
+  });
+
+  var verticalSwiper = new Swiper('.vertical-swiper-container', {
+    direction: 'vertical',
+    navigation: {
+      nextEl: '.vertical-swiper-button-next',
+      prevEl: '.vertical-swiper-button-prev',
+    },
   });
 });
