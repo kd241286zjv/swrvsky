@@ -1606,3 +1606,6 @@ footer{
     top: 60px;
   }
 }
+section{
+  box-sizing: content-box;
+}
